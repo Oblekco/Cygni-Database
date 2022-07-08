@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+        <link rel="stylesheet" href="./styles.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CYGNI</title>
+    </head>
+
+    <body>
+        <h1>Proyecto Cygni</h1>
+
+        <p> Se parte del siguiente archivo <code>
+                cygni_edomex_backup_20220427_1223.sql </code> el cual contiene
+            la base de
+            datos <code>cygni_edomex</code> con las siguientes tablas:</p>
+
+        <div class="row">
+            <div class="column">
+                <a href="./tablas.html">
+                    <img alt="BD" src="bd.png">
+                </a>
+            </div>
+            <div class="column">
+                <div>
+                    <a href="./cygniER.png">
+                        <img alt="BD" src="er.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <p>Las fuentes de los datos provienen de tres bases específicamente:</p>
+        <ul>
+
+            <li> Listado de bases de datos <a href="./sesnsp.html">SESNSP</a></li>
+            <li> Listado de bases de datos <a href="./coneval.html">CONEVAL</a></li>
+            <li> Listado de bases de datos <a href="./inegi.html">INEGI</a></li>
+
+        </ul>
+
+    </body>
+
+</html>
