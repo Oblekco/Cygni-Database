@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <style>
+<head>
+    <style>
         * {
             box-sizing: border-box;
         }
@@ -20,46 +20,59 @@
             display: table;
         }
     </style>
-        <link rel="stylesheet" href="./styles.css">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CYGNI</title>
-    </head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYGNI</title>
+</head>
 
-    <body>
-        <h1>Proyecto Cygni</h1>
+<body>
+    <h1>Proyecto Cygni</h1>
 
-        <p> Se parte del siguiente archivo <code>
+    <p> Se parte del siguiente archivo <code>
                 cygni_edomex_backup_20220427_1223.sql </code> el cual contiene
-            la base de
-            datos <code>cygni_edomex</code> con las siguientes tablas:</p>
+        la base de
+        datos <code>cygni_edomex</code> con las siguientes tablas:</p>
 
-        <div class="row">
-            <div class="column">
-                <a href="./tablas.html">
-                    <img alt="BD" src="bd.png">
+    <div class="row">
+        <div class="column">
+            <a href="./tablas.html">
+                <img alt="BD" src="bd.png">
+            </a>
+        </div>
+        <div class="column">
+            <div>
+                <a href="./cygniER.png">
+                    <img alt="BD" src="er.png">
                 </a>
             </div>
-            <div class="column">
-                <div>
-                    <a href="./cygniER.png">
-                        <img alt="BD" src="er.png">
-                    </a>
-                </div>
-            </div>
         </div>
+    </div>
 
 
-        <p>Las fuentes de los datos provienen de tres bases específicamente:</p>
-        <ul>
+    <p>Las fuentes de los datos provienen de tres bases específicamente:</p>
+    <ul>
 
-            <li> Listado de bases de datos <a href="./sesnsp.html">SESNSP</a></li>
-            <li> Listado de bases de datos <a href="./coneval.html">CONEVAL</a></li>
-            <li> Listado de bases de datos <a href="./inegi.html">INEGI</a></li>
+        <li> Listado de bases de datos <a href="./sesnsp.html">SESNSP</a></li>
+        <li> Listado de bases de datos <a href="./coneval.html">CONEVAL</a></li>
+        <li> Listado de bases de datos <a href="./inegi.html">INEGI</a></li>
 
-        </ul>
+    </ul>
 
-    </body>
+    <p>A continuación se tiene el objetivo de usar Python para generar un dataframe general
+        que reúna todas las tablas de la base de datos. </p>
+
+    <p> El script <code>cygniEdomex.py</code> realiza la conexión con <code>Mysql Server</code>
+        para poder extraer la información de <code>cygni_edomex</code>, luego realiza el procesamiento
+        de la información y organización en dataframes de acuerdo a la relación de las tablas.
+        Finalmente se genera un dataframe general llamado <code>Cygni</code>.
+        Este dataframe se convierte en un archivo binario para su utilización en el análisis posterior.
+    </p>
+    <p>La información del dataframe general la podemos visualizar en el siguiente link, en donde se puede
+        saber que se cuenta con una matriz de 1063711 filas por 35 columnas. <a href="./cygni_dataframe.html"><code>data.info()</code></a>
+    </p>
+
+</body>
 
 </html>
